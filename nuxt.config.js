@@ -34,6 +34,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    // https://pwa.nuxtjs.org/
+    '@nuxtjs/pwa'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -44,6 +46,22 @@ export default {
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
+
+  // PWA module configuration: https://pwa.nuxtjs.org/
+  pwa: {
+    meta: {
+      title: "CosmosDocs.io",
+      author: "Team Cosmos France",
+    },
+    manifest: {
+      name: "CosmosDocs.io",
+      short_name: "CosmosDocs.io",
+      description: "Découvrez les spécificités techniques de vos cryptomonnaies préféréés sur le réseau Cosmos",
+      lang: "fr",
+      display: 'standalone',
+      theme_color: "dark",
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
