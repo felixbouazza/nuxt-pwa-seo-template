@@ -59,7 +59,7 @@ export default {
       description: "Découvrez les spécificités techniques de vos cryptomonnaies préféréés sur le réseau Cosmos",
       lang: "fr",
       display: 'standalone',
-      theme_color: "dark",
+      theme_color: "#000000",
     },
   },
 
