@@ -50,12 +50,12 @@ export default {
   // PWA module configuration: https://pwa.nuxtjs.org/
   pwa: {
     meta: {
-      title: "CosmosDocs.io",
+      title: "CosmosDocs",
       author: "Team Cosmos France",
     },
     manifest: {
-      name: "CosmosDocs.io",
-      short_name: "CosmosDocs.io",
+      name: "CosmosDocs",
+      short_name: "CosmosDocs",
       description: "Découvrez les spécificités techniques de vos cryptomonnaies préféréés sur le réseau Cosmos",
       lang: "fr",
       display: 'standalone',
