@@ -27,6 +27,12 @@ export default {
   plugins: [
   ],
 
+  robots: {
+    UserAgent: "*",
+    Disallow: ['/admin'],
+    Sitemap: "https://www.cosmosdocs.io/sitemap.xml"
+  },
+
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
@@ -42,6 +48,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/robots',
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
