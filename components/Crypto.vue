@@ -11,7 +11,7 @@
                     </template>
                 </svg>
             </button>
-            <img :src="crypto.logo" width="20">
+            <img :src="crypto.logo" width="20" :alt="'Le logo de la cryptomonnaie ' + crypto.title">
             &nbsp;{{ crypto.title }}
         </li>
         <ul v-if="cryptoSubMenuIsActive">
