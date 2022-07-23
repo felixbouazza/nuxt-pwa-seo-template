@@ -25,7 +25,6 @@ collections:
     identifier_field: "title"
     folder: "content/cryptomonnaies"
     create: true
-    hide: true
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Logo", name: "logo", widget: "image"}
