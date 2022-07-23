@@ -32,9 +32,6 @@ export default {
             required: true,
         }
     },
-    async created(){
-        console.log(this.props)
-    },
     methods: {
         async toggleCryptoSubMenu() {
             this.cryptoSubMenuIsActive = !this.cryptoSubMenuIsActive
