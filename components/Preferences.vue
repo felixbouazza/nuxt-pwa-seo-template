@@ -81,7 +81,7 @@
       <p>ENABLE</p>
     </div>
 
-    <div class="overflow-y-auto h-full">
+    <div class="overflow-y-auto h-navbar">
       <ul class="space-y-2">
         <Crypto
           v-for="crypto in cryptoList"

@@ -42,7 +42,7 @@
         </svg>
       </button>
     </div>
-    <div :class="isDisplay" class="overflow-y-auto h-full">
+    <div :class="isDisplay" class="overflow-y-auto h-navbar">
       <ul>
         <Crypto
           v-for="crypto in filteredCryptoList"
