@@ -36,3 +36,59 @@ collections:
       - { label: "Lien du site Discord", name: "discordLink", widget: "string"}
       - { label: "Lien du site Medium", name: "mediumLink", widget: "string"}
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "actualites"
+    label: "Actualités"
+    label_singular: "Actualité"
+    description: "Liste des actualités présentés sur le site Cosmosdocs.io"
+    identifier_field: "title"
+    folder: "content/actualites"
+    create: true
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image"}
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Meta-Keywords", name: "metaKeywords", widget: "string"}
+      - { label: "Cryptomonnaie", name: "cryptomonnaie", widget: "relation", collection: "cryptomonnaies", search_fields: ["title"], value_field: "title", multiple: true}
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "airdrops"
+    label: "Airdrops"
+    label_singular: "Airdrop"
+    description: "Liste des airdrops présentés sur le site Cosmosdocs.io"
+    identifier_field: "title"
+    folder: "content/airdrops"
+    create: true
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image"}
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Meta-Keywords", name: "metaKeywords", widget: "string"}
+      - { label: "Cryptomonnaie", name: "cryptomonnaie", widget: "relation", collection: "cryptomonnaies", search_fields: ["title"], value_field: "title", multiple: true}
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "gouvernances"
+    label: "Gouvernances"
+    label_singular: "Gouvernance"
+    description: "Liste des gouvernances présentés sur le site Cosmosdocs.io"
+    identifier_field: "title"
+    folder: "content/gouvernances"
+    create: true
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image"}
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Meta-Keywords", name: "metaKeywords", widget: "string"}
+      - { label: "Cryptomonnaie", name: "cryptomonnaie", widget: "relation", collection: "cryptomonnaies", search_fields: ["title"], value_field: "title", multiple: true}
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "staking"
+    label: "Staking"
+    label_singular: "Staking"
+    description: "Liste des actualités présentés sur le site Cosmosdocs.io"
+    identifier_field: "title"
+    folder: "content/staking"
+    create: true
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image"}
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Meta-Keywords", name: "metaKeywords", widget: "string"}
+      - { label: "Cryptomonnaie", name: "cryptomonnaie", widget: "relation", collection: "cryptomonnaies", search_fields: ["title"], value_field: "title", multiple: true}
+      - { label: "Body", name: "body", widget: "markdown" }
