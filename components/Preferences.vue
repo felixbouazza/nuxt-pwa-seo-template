@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <a href="#">
+  <div class="flex flex-col h-full">
+    <div class="h-40">
+      <a href="#">
       <div class="m-0 flex flex-row border border-gray-400 p-3">
         <svg width="24" height="24" viewBox="0 0 24 24">
           <svg
@@ -80,9 +81,10 @@
       <p>DOCUMENTATION</p>
       <p>ENABLE</p>
     </div>
+    </div>
 
-    <div class="overflow-y-auto h-navbar">
-      <ul class="space-y-2">
+    <div class="overflow-y-auto maxheightscroll-preference">
+      <ul>
         <Crypto
           v-for="crypto in cryptoList"
           :key="crypto.title"

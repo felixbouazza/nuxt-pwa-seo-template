@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.maxheightscroll-preference {
+    max-height: calc(100vh - 160px);
+}
+
+.maxheightscroll {
+    max-height: calc(100vh - 48px);
+}

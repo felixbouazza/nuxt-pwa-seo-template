@@ -14,7 +14,7 @@
 export default {
   data() {
     return {
-      displayPreference: true,
+      displayPreference: false,
     };
   },
 };

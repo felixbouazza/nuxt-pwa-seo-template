@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex flex-row justify-between px-3 py-2">
+    <div class="flex flex-row justify-between px-3 py-2 h-12">
       <button class="md:hidden" @click="toggleCryptoList">
         <svg width="24" height="24" viewBox="0 0 24 24">
           <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
@@ -42,7 +42,7 @@
         </svg>
       </button>
     </div>
-    <div :class="isDisplay" class="overflow-y-auto h-navbar">
+    <div :class="isDisplay" class="overflow-y-auto maxheightscroll">
       <ul>
         <Crypto
           v-for="crypto in filteredCryptoList"
