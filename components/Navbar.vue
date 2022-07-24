@@ -15,7 +15,7 @@
             </button>
         </div>
         <div :class="isDisplay" class="overflow-y-auto h-full">
-            <ul class="space-y-2">
+            <ul>
                 <Crypto v-for="crypto in filteredCryptoList" :key="crypto.title" :crypto="crypto"/>
             </ul>
         </div>

@@ -11,8 +11,9 @@
                     </template>
                 </svg>
             </button>
-            <img :src="crypto.logo" width="20" :alt="'Le logo de la cryptomonnaie ' + crypto.title">
-            &nbsp;{{ crypto.title }}
+            <nuxt-link :to="crypto.path" class="flex flex-row w-full hover:bg-gray-300">
+                <img :src="crypto.navbarLogo" :alt="'Le logo de la cryptomonnaie ' + crypto.title">
+            </nuxt-link>
         </li>
         <ul v-if="cryptoSubMenuIsActive">
             <li v-for="subMenu in cryptoSubMenu" :key="subMenu">
