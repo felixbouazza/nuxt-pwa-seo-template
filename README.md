@@ -95,5 +95,3 @@ yarn dev
 # Utiliser NuxtJS
 
 [Documentation](https://nuxtjs.org/docs/get-started/directory-structure)
-
-# test
