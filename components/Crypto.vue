@@ -7,11 +7,12 @@
                         <template v-if="cryptoSubMenuIsActive">
                             <path fill="none" d="M0 0h24v24H0z"/><path d="M12 16l-6-6h12z"/>
                         </template>
-                        <template v-else>
-                </button>
-                    </svg>
+                        <template v-else><path fill="none" d="M0 0h24v24H0z"/><path d="M16 12l-6 6V6z"/>
                         </template>
-                            <path fill="none" d="M0 0h24v24H0z"/><path d="M16 12l-6 6V6z"/>
+                        </svg>
+                </button>
+
+                       
             <nuxt-link :to="crypto.path" class="flex flex-row w-full hover:bg-gray-300">
                 <img :src="crypto.navbarLogo" :alt="'Le logo de la cryptomonnaie ' + crypto.title">
             </nuxt-link>
@@ -33,34 +34,31 @@
 </template>
 
 <script>
-
 export default {
-    data(){
-        return {
-            cryptoSubMenu: ["Actualités", "Gouvernances", "Airdrops", "Staking"],
-            cryptoSubMenuIsActive: false,
-        }
+  data() {
+    return {
+      cryptoSubMenu: ["Actualités", "Gouvernances", "Airdrops", "Staking"],
+      cryptoSubMenuIsActive: false,
+    };
+  },
+  props: {
+    crypto: {
+      type: Object,
+      required: true,
     },
-    props: {
-        crypto: {
-            type: Object,
-            required: true,
-        }, 
-        isPreference: {
-            type: Boolean,
-            required: false,
-            default: false,
-
-        }
+    isPreference: {
+      type: Boolean,
+      required: false,
+      default: false,
     },
-    methods: {
-        async toggleCryptoSubMenu() {
-            this.cryptoSubMenuIsActive = !this.cryptoSubMenuIsActive
-        }
+  },
+  methods: {
+    async toggleCryptoSubMenu() {
+      this.cryptoSubMenuIsActive = !this.cryptoSubMenuIsActive;
     },
-}
+  },
+};
 </script>
 
 <style>
-
 </style>
