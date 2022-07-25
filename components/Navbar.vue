@@ -6,19 +6,7 @@
           <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
         </svg>
       </button>
-      <div
-        class="
-          flex flex-row
-          bg-white
-          px-2
-          py-1
-          border
-          rounded-md
-          border-gray-300
-          w-4/5
-          md:w-full md:mr-2
-        "
-      >
+      <div class="flex flex-row bg-white px-2 py-1 border rounded-md border-gray-300 w-4/5">
         <svg class="mr-2" width="24" height="24" viewBox="0 0 24 24">
           <path
             data-name="search-Filled"
@@ -33,7 +21,7 @@
           placeholder="Rechercher..."
         />
       </div>
-      <button>
+      <button @click="$emit('openPreference')">
         <svg width="24" height="24" viewBox="0 0 24 24">
           <path
             data-name="settings-Filled"
@@ -70,7 +58,7 @@ export default {
   },
   computed: {
     isDisplay() {
-      if (this.cryptoListActive) {
+      if (!this.cryptoListActive) {
         return "hidden md:block";
       }
       return "";

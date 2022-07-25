@@ -9,3 +9,16 @@
 .maxheightscroll {
     max-height: calc(100vh - 48px);
 }
+
+.minHeightContentMobile {
+    min-height: calc(100vh - 54px);
+}
+
+.navbarGray {
+    background-color: #eee;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
