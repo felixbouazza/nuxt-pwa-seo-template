@@ -57,6 +57,9 @@
           :isPreference="true"
         />
       </ul>
+      <ul>
+        <li v-for="item in items" :key="item">{{ item }}</li>
+      </ul>
     </div>
   </div>
 </template>
@@ -66,11 +69,12 @@ export default {
   data() {
     return {
       cryptoList: [],
+      items: []
     };
   },
-
   async fetch() {
     this.cryptoList = await this.$content("cryptomonnaies").fetch();
+    this.items = await this.$localForage.getItem("items")
   },
 };
 </script>
