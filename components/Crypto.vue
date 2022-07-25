@@ -21,7 +21,7 @@
                   <img :src="crypto.navbarLogo" :alt="'Le logo de la cryptomonnaie ' + crypto.title">
                 </template>
                 <template v-else>
-                  <nuxt-link :to="crypto.path" class="flex flex-row w-full hover:bg-gray-300">
+                  <nuxt-link :to="crypto.path" class="flex flex-row hover:bg-gray-300">
                       <img :src="crypto.navbarLogo" :alt="'Le logo de la cryptomonnaie ' + crypto.title">
                   </nuxt-link>
                 </template>

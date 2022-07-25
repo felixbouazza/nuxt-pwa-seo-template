@@ -46,7 +46,8 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     // https://pwa.nuxtjs.org/
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/localforage',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

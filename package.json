@@ -15,6 +15,7 @@
     "nuxt": "^2.15.8"
   },
   "devDependencies": {
+    "@nuxtjs/localforage": "^1.1.0",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/tailwindcss": "^4.2.1",
     "postcss": "^8.4.4"
