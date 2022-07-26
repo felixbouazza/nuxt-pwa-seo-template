@@ -20,7 +20,7 @@
 
         <label class="flex items-center cursor-pointer">
           <div class="relative">
-            <input type="checkbox" class="sr-only cursor-pointer" />
+            <input v-model="light" @click="SwitchColorMode" type="checkbox" class="sr-only cursor-pointer" />
 
             <div class="w-10 h-4 bg-gray-400 rounded-full shadow-inner"></div>
 
@@ -58,7 +58,7 @@
             :isPreference="true"
           />
         </ul>
-      </div>
+      </div>       
     </div>
   </div>
 </template>
@@ -68,12 +68,25 @@ export default {
   data() {
     return {
       cryptoList: [],
+      light:true,
     };
   },
   async fetch() {
     this.cryptoList = await this.$content("cryptomonnaies").fetch();
   },
+  methods:{
+    SwitchColorMode() {
+      if (this.$colorMode.preference == "dark") {
+        this.$colorMode.preference = "light"
+      }
+      else {
+        this.$colorMode.preference = "dark"
+      }
+    }
+  }
 };
+
+
 </script>
 
 

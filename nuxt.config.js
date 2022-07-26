@@ -48,7 +48,18 @@ export default {
     // https://pwa.nuxtjs.org/
     '@nuxtjs/pwa',
     '@nuxtjs/localforage',
+    "@nuxtjs/color-mode",
   ],
+
+  tailwindcss: {
+    mode: "jit",
+    // add '~tailwind.config` alias
+    exposeConfig: true
+  },
+  colorMode: {
+    classSuffix: ""
+  },
+
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [

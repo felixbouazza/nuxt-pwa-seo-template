@@ -10,7 +10,8 @@
             <Navbar @openPreference="changeDisplayPreferenceValue()" class="w-full md:w-96 border bg-gray-200"/>
         </template>
         
-        <Nuxt class="bg-blue-500 border minHeightContentMobile md:w-content"/>
+        <Nuxt class="bg-gray-100 dark:bg-gray-800 border minHeightContentMobile md:w-content"/>
+
     </div>
 
 </template>
@@ -28,4 +29,6 @@ export default {
     },
   }
 };
+
 </script>
+
