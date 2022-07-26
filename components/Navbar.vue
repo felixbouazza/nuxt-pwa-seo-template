@@ -38,10 +38,6 @@
           :crypto="crypto"
         />
       </ul>
-      <button @click="storeData">test</button>
-      <ul>
-        <li v-for="item in items" :key="item">{{ item }}</li>
-      </ul>
     </div>
   </div>
 </template> 
@@ -53,17 +49,12 @@ export default {
       cryptoListActive: false,
       cryptoSearch: null,
       cryptoList: [],
-      items: []
     };
   },
   methods: {
     async toggleCryptoList() {
       this.cryptoListActive = !this.cryptoListActive;
     },
-    async storeData() {
-      await this.$localForage.setItem("items", ["lalalal", "icicicic", "fefepkfr"])
-      this.items = await this.$localForage.getItem("items")
-    }
   },
   computed: {
     isDisplay() {

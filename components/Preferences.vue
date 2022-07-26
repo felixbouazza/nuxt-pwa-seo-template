@@ -1,11 +1,11 @@
 <template>
   <div class="flex flex-col h-full">
-    <div class="h-25">
+    <div class="h-25 border-b border-gray-300 bg-gray-200">
         <div class="flex flex-row justify-around py-4">
         <button @click="$emit('closePreference')" class="flex flex-row">
           <svg width="24" height="24" viewBox="0 0 24 24">
-              <path fill="none" d="M0 0h24v24H0z" />
-              <path d="M12 13v7l-8-8 8-8v7h8v2z" />
+              <path fill="none" d="M0 0h24v24H0z"/>
+              <path d="M7.828 11H20v2H7.828l5.364 5.364-1.414 1.414L4 12l7.778-7.778 1.414 1.414z"/>
           </svg>
           <p class="ml-1 font-bold">Back</p>
         </button>
@@ -18,9 +18,9 @@
 
         <div class="mr-5 ml-1">Dark</div>
 
-        <label for="toogleA" class="flex items-center cursor-pointer">
+        <label class="flex items-center cursor-pointer">
           <div class="relative">
-            <input id="toogleA" type="checkbox" class="sr-only" />
+            <input type="checkbox" class="sr-only cursor-pointer" />
 
             <div class="w-10 h-4 bg-gray-400 rounded-full shadow-inner"></div>
 
@@ -28,10 +28,9 @@
 
             </div>
           </div>
-
-          <div class="ml-3 text-gray-700 font-medium"></div>
         </label>
-        <div class="ml-2 mr-1">Light</div>
+
+        <div class="ml-5 mr-1">Light</div>
         <svg width="24" height="24" viewBox="0 0 24 24">
             <path fill="none" d="M0 0h24v24H0z" />
             <path
@@ -42,24 +41,24 @@
 
       </div>
       
-      <div class="flex justify-between py-2">
-        <p>DOCUMENTATION</p>
-        <p>ENABLE</p>
-      </div>
     </div>
 
-    <div class="overflow-y-auto maxheightscroll-preference">
-      <ul>
-        <Crypto
-          v-for="crypto in cryptoList"
-          :key="crypto.title"
-          :crypto="crypto"
-          :isPreference="true"
-        />
-      </ul>
-      <ul>
-        <li v-for="item in items" :key="item">{{ item }}</li>
-      </ul>
+    <div class="flex flex-col pl-2 pr-4">
+      <div class="flex justify-between py-2">
+          <p>DOCUMENTATION</p>
+          <p>ENABLE</p>
+      </div>
+
+      <div class="overflow-y-auto maxheightscroll-preference">
+        <ul>
+          <Crypto
+            v-for="crypto in cryptoList"
+            :key="crypto.title"
+            :crypto="crypto"
+            :isPreference="true"
+          />
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -69,12 +68,10 @@ export default {
   data() {
     return {
       cryptoList: [],
-      items: []
     };
   },
   async fetch() {
     this.cryptoList = await this.$content("cryptomonnaies").fetch();
-    this.items = await this.$localForage.getItem("items")
   },
 };
 </script>
