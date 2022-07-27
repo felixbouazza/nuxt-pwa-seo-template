@@ -34,7 +34,7 @@ export default {
         isSettingsSidebar: (state) => state.isSettingsSidebar
       }),
       isCurrentCrypto() {
-        return this.currentCrypto == this.crypto.title && !this.isPreference ? "bg-blue-500" : ""
+        return this.currentCrypto == this.crypto.title && !this.isSettingsSidebar ? "bg-blue-500" : ""
       }
     },
     methods: {

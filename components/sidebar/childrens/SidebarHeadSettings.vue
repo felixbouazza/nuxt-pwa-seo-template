@@ -47,12 +47,14 @@ export default {
         ...mapMutations({
             switchNavbar: "switchNavbar",
         }),
-        switchColorMode() {
+        async switchColorMode() {
             if (this.$colorMode.preference == "dark") {
                 this.$colorMode.preference = "light"
+                // await this.$localForage.setItem("colorMode", "light")
             }
             else {
                 this.$colorMode.preference = "dark"
+                // await this.$localForage.setItem("colorMode", "dark")
             }
         }
     }
