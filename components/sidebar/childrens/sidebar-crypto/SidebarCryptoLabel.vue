@@ -1,6 +1,6 @@
 <template>
   <div>
-    <template v-if="isPreference">
+    <template v-if="isSettingsSidebar">
         <img :src="crypto.navbarLogo" :alt="'Le logo de la cryptomonnaie ' + crypto.title">
     </template>
     <template v-else>
@@ -15,18 +15,18 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapMutations, mapState } from 'vuex'
 export default {
     props: {
         crypto: {
             type: Object,
             required: true,
         },
-        isPreference: {
-            type: Boolean,
-            required: false,
-            default: false,
-        },
+    },
+    computed: {
+        ...mapState({
+            isSettingsSidebar: (state) => state.isSettingsSidebar,
+        }),
     },
     methods: {
         ...mapMutations(["setCurrentCrypto"]),

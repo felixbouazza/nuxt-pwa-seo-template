@@ -1,7 +1,6 @@
 <template>
-  <div>
     <div class="flex flex-row justify-between px-3 py-2 h-12">
-      <button class="md:hidden" @click="toggleCryptoList">
+      <button @click="displayCryptoList" class="md:hidden">
         <svg width="24" height="24" viewBox="0 0 24 24">
           <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
         </svg>
@@ -16,12 +15,13 @@
         </svg>
         <input
           v-model="cryptoSearch"
+          @input="triggerSearch"
           class="outline-none"
           type="text"
           placeholder="Rechercher..."
         />
       </div>
-      <button @click="$emit('openPreference')">
+      <button @click="switchNavbar">
         <svg width="24" height="24" viewBox="0 0 24 24">
           <path
             data-name="settings-Filled"
@@ -30,50 +30,30 @@
         </svg>
       </button>
     </div>
-    <div :class="isDisplay" class="overflow-y-auto maxheightscroll">
-      <ul>
-        <Crypto
-          v-for="crypto in filteredCryptoList"
-          :key="crypto.title"
-          :crypto="crypto"
-        />
-      </ul>
-    </div>
-  </div>
-</template> 
+</template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
-  data() {
-    return {
-      cryptoListActive: false,
-      cryptoSearch: null,
-      cryptoList: [],
-    };
-  },
-  methods: {
-    async toggleCryptoList() {
-      this.cryptoListActive = !this.cryptoListActive;
-    },
-  },
-  computed: {
-    isDisplay() {
-      if (!this.cryptoListActive) {
-        return "hidden md:block";
+    data() {
+      return {
+        cryptoSearch: null
       }
-      return "";
     },
-    filteredCryptoList() {
-      if (!this.cryptoSearch) return this.cryptoList;
-      return this.cryptoList.filter((crypto) => {
-        return crypto.title
-          .toLowerCase()
-          .includes(this.cryptoSearch.toLowerCase());
-      });
+    methods: {
+        ...mapMutations({
+          switchNavbar: "switchNavbar",
+          displayCryptoList: "displayCryptoList",
+          searchCrypto: "searchCrypto"
+        }),
+        triggerSearch() {
+          this.searchCrypto(this.cryptoSearch.toLowerCase())
+        }
     },
-  },
-  async fetch() {
-    this.cryptoList = await this.$content("cryptomonnaies").fetch();
-  },
-};
+}
 </script>
+
+<style>
+
+</style>
