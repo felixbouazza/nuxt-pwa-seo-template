@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .cryptolistheight {
+        height: calc(100vh - 48px);
+    }
+    .contentminheight {
+        min-height: calc(100vh - 48px);
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}

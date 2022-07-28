@@ -1,5 +1,5 @@
 <template>
-    <div :class="isDisplay" class="overflow-y-auto maxheightscroll px-2">
+    <div :class="isDisplay">
         <div v-if="isSettingsSidebar" class="flex flex-row justify-between">
             <p>Documentation</p>
             <p>Activer</p>
@@ -30,9 +30,13 @@ export default {
             cryptoSearch: (state) => state.cryptoSearch
         }),
         isDisplay() {
+            if(this.cryptoSearch) {
+                return ""
+            }
             if (!this.cryptoListActive && !this.isSettingsSidebar) {
                 return "hidden md:block";
             }
+            if (this.isSettingsSidebar) return "px-2"
             return "";
         },
         filteredCryptoList() {

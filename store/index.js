@@ -12,13 +12,6 @@ const mutations = {
     switchNavbar(state) {
         state.isSettingsSidebar = !state.isSettingsSidebar
     },
-    switchColorMode(state) {
-        if(state.colorMode == "dark") {
-            state.colorMode == "light"
-        } else {
-            state.colorMode == "dark"
-        }
-    },
     displayCryptoList(state) {
         state.cryptoListActive = !state.cryptoListActive
     },

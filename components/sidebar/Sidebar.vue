@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col">
-        <SidebarHead />
-        <SidebarContent />
+        <SidebarHead class="bg-sidebarHeaderBackgroundLight dark:bg-sidebarHeaderBackgroundDark" />
+        <SidebarContent class="bg-sidebarContentBackgroundLight dark:bg-sidebarContentBackgroundDark cryptolistheight overflow-y-auto" />
     </div>
 </template>
 
