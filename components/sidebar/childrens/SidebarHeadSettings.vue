@@ -16,7 +16,7 @@
 
             <label class="cursor-pointer">
                 <div class="relative">
-                    <input v-model="isLightMode" @click="switchColorMode" type="checkbox" class="sr-only cursor-pointer" />
+                    <input v-model="isLightMode" type="checkbox" class="sr-only cursor-pointer" />
                     <div class="w-10 h-4 bg-gray-400 rounded-full shadow-inner"></div>
                     <div class="dot absolute w-6 h-6 bg-black dark:bg-white rounded-full shadow -left-1 -top-1 transition"></div>
                 </div>
@@ -38,25 +38,27 @@ import { mapMutations } from 'vuex'
 
 export default {
     computed: {
-        isLightMode() {
-            if (this.$colorMode.preference == "dark") return false
-            return true
+        isLightMode: {
+            get() {
+                if (this.$colorMode.preference == "dark") return false
+                return true
+            },
+            async set() {
+                if (this.$colorMode.preference == "dark") {
+                    this.$colorMode.preference = "light"
+                    await this.$localForage.settings.setItem("colorMode", "light")
+                }
+                else {
+                    this.$colorMode.preference = "dark"
+                    await this.$localForage.settings.setItem("colorMode", "dark")
+                }
+            }
         }
     },
     methods: {
         ...mapMutations({
             switchNavbar: "switchNavbar",
         }),
-        async switchColorMode() {
-            if (this.$colorMode.preference == "dark") {
-                this.$colorMode.preference = "light"
-                await this.$localForage.settings.setItem("colorMode", "light")
-            }
-            else {
-                this.$colorMode.preference = "dark"
-                await this.$localForage.settings.setItem("colorMode", "dark")
-            }
-        }
     }
     
 }
