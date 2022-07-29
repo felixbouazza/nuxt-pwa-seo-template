@@ -7,6 +7,7 @@ const state = () => ({
 
 const mutations = {
     setCurrentCrypto(state, currentCrypto) {
+        state.cryptoListActive = false
         state.currentCrypto = currentCrypto
     },
     switchNavbar(state) {

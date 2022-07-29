@@ -5,9 +5,6 @@
         <p class="ml-2">{{ crypto.title }}</p>
     </template>
     <template v-else>
-        <!-- <button @click="setCurrentCryptoAndPush" class="flex flex-row">
-            <img :src="crypto.navbarLogo" :alt="'Le logo de la cryptomonnaie ' + crypto.title">
-        </button> -->
         <nuxt-link :to="crypto.path" class="flex flex-row">
             <img width="19" height="19" :src="crypto.navbarLogo" :alt="'Le logo de la cryptomonnaie ' + crypto.title">
             <p class="ml-2">{{ crypto.title }}</p>
@@ -17,7 +14,7 @@
 </template>
 
 <script>
-import { mapMutations, mapState } from 'vuex'
+import { mapState } from 'vuex'
 export default {
     props: {
         crypto: {
@@ -30,15 +27,6 @@ export default {
             isSettingsSidebar: (state) => state.isSettingsSidebar,
         }),
     },
-    methods: {
-        ...mapMutations(["setCurrentCrypto"]),
-        setCurrentCryptoAndPush(){
-            this.setCurrentCrypto(this.crypto.title)
-            this.$router.push({
-                path: this.crypto.path
-            })
-        }
-    }
 }
 </script>
 

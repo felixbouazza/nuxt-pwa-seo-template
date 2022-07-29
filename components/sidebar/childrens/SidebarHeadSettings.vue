@@ -56,9 +56,7 @@ export default {
         }
     },
     methods: {
-        ...mapMutations({
-            switchNavbar: "switchNavbar",
-        }),
+        ...mapMutations(["switchNavbar"]),
     }
     
 }

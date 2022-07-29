@@ -42,11 +42,7 @@ export default {
       }
     },
     methods: {
-        ...mapMutations({
-          switchNavbar: "switchNavbar",
-          displayCryptoList: "displayCryptoList",
-          searchCrypto: "searchCrypto"
-        }),
+        ...mapMutations(["switchNavbar", "displayCryptoList", "searchCrypto"]),
         triggerSearch() {
           this.searchCrypto(this.cryptoSearch.toLowerCase())
         }
