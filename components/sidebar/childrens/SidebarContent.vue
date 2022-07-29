@@ -1,6 +1,6 @@
 <template>
     <div :class="isDisplay">
-        <div v-if="isSettingsSidebar" class="flex flex-row justify-between">
+        <div v-if="isSettingsSidebar" class="flex flex-row justify-between py-2">
             <p>Documentation</p>
             <p>Activer</p>
         </div>

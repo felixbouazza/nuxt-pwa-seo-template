@@ -1,7 +1,7 @@
 ---
-title: EVMOS
+title: Evmos
 logo: /img/logo_evmos.png
-navbarLogo: /img/logo_navbar_evmos.png
+navbarLogo: /img/logo_sidebar_evmos.png
 description: Une description de qualité
 metaKeywords: key, key, key, key, key
 officialLink: "https://evmos.org/"

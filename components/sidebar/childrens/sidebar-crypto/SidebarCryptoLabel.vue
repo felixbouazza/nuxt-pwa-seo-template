@@ -1,14 +1,16 @@
 <template>
-  <div>
+  <div class="flex flex-row py-1">
     <template v-if="isSettingsSidebar">
-        <img :src="crypto.navbarLogo" :alt="'Le logo de la cryptomonnaie ' + crypto.title">
+        <img width="19" height="19" :src="crypto.navbarLogo" :alt="'Le logo de la cryptomonnaie ' + crypto.title">
+        <p class="ml-2">{{ crypto.title }}</p>
     </template>
     <template v-else>
         <!-- <button @click="setCurrentCryptoAndPush" class="flex flex-row">
             <img :src="crypto.navbarLogo" :alt="'Le logo de la cryptomonnaie ' + crypto.title">
         </button> -->
         <nuxt-link :to="crypto.path" class="flex flex-row">
-            <img :src="crypto.navbarLogo" :alt="'Le logo de la cryptomonnaie ' + crypto.title">
+            <img width="19" height="19" :src="crypto.navbarLogo" :alt="'Le logo de la cryptomonnaie ' + crypto.title">
+            <p class="ml-2">{{ crypto.title }}</p>
         </nuxt-link>
     </template>
   </div>
