@@ -2,7 +2,8 @@ const state = () => ({
     currentCrypto: null,
     isSettingsSidebar: false,
     cryptoListActive: false,
-    cryptoSearch: null
+    cryptoSearch: null,
+    preferredCryptoList: []
 })
 
 const mutations = {
@@ -18,10 +19,16 @@ const mutations = {
     },
     searchCrypto(state, search) {
         state.cryptoSearch = search
+    },
+    resetSearch(state) {
+        state.cryptoSearch = null
+    },
+    updatePreferredCryptoList(state, data) {
+        state.preferredCryptoList = data
     }
 }
 
 export default {
     state,
-    mutations
+    mutations,
 }

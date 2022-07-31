@@ -4,13 +4,30 @@
             <p>Documentation</p>
             <p>Activer</p>
         </div>
-        <ul>
+        <template v-if="isSettingsSidebar">
             <SidebarCrypto
             v-for="crypto in filteredCryptoList"
             :key="crypto.title"
             :crypto="crypto"
             />
-        </ul>
+        </template>
+        <template v-else>
+            <ul>
+                <SidebarCrypto
+                v-for="crypto in filteredCryptoList['preferredCryptoList']"
+                :key="crypto.title"
+                :crypto="crypto"
+                />
+            </ul>
+            <p>Disabled</p>
+            <ul>
+                <SidebarCrypto
+                v-for="crypto in filteredCryptoList['unpreferredCryptoList']"
+                :key="crypto.title"
+                :crypto="crypto"
+                />
+            </ul>
+        </template>
     </div>
 </template>
 
@@ -27,7 +44,8 @@ export default {
         ...mapState({
             isSettingsSidebar: (state) => state.isSettingsSidebar,
             cryptoListActive: (state) => state.cryptoListActive,
-            cryptoSearch: (state) => state.cryptoSearch
+            cryptoSearch: (state) => state.cryptoSearch,
+            preferredCryptoList: (state) => state.preferredCryptoList
         }),
         isDisplay() {
             if(this.cryptoSearch) {
@@ -40,10 +58,28 @@ export default {
             return "";
         },
         filteredCryptoList() {
-            if(!this.cryptoSearch) return this.cryptoList
-            return this.cryptoList.filter((crypto) => {
-                return crypto.title.toLowerCase().includes(this.cryptoSearch)
+            if (this.isSettingsSidebar) return this.cryptoList
+            
+            let filteredCryptoList = this.cryptoList
+            if(this.cryptoSearch) {
+                filteredCryptoList = filteredCryptoList.filter((crypto) => {
+                    return crypto.title.toLowerCase().includes(this.cryptoSearch)
+                })
+            }
+
+            let preferredCryptoList = []
+            let unpreferredCryptoList = []
+            filteredCryptoList.map((crypto) => {
+                if(this.preferredCryptoList.includes(crypto.title.toLowerCase())) {
+                    preferredCryptoList.push(crypto)
+                } else {
+                    unpreferredCryptoList.push(crypto)
+                }
             })
+            return {
+                preferredCryptoList,
+                unpreferredCryptoList
+            }
         }
     },
     async fetch() {

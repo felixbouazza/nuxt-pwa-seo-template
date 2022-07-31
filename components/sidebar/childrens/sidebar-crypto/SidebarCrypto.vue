@@ -2,7 +2,7 @@
     <div class="flex flex-col">
         <div class="flex flex-row justify-between items-center">
             <li class="flex w-full" :class="isCurrentCrypto">
-                <SidebarCryptoArrow @toggle-sub-menu="toggleCryptoSubMenu" />
+                <SidebarCryptoArrow @toggle-sub-menu="toggleCryptoSubMenu" v-if="!isSettingsSidebar"/>
                 <SidebarCryptoLabel :crypto="crypto"/>
             </li>
             <div v-if="isSettingsSidebar">

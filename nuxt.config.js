@@ -103,6 +103,9 @@ export default {
     instances: [{
       name: "CosmosDocsIO",
       storeName: "settings"
+    }, {
+      name: "CosmosDocsIO",
+      storeName: "data"
     }]
   }
 }

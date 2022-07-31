@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex"
+import { mapState, mapMutations } from "vuex"
 
 export default {
     async mounted() {
@@ -14,13 +14,27 @@ export default {
         if(!colorMode) {
             await this.$localforage.settings.setItem("colorMode", "light")
             this.$colorMode.preference = "light"
-            return
+        } else {
+            this.$colorMode.preference = colorMode
         }
-        this.$colorMode.preference = colorMode
+        
+        const preferredCryptoList = await this.$localforage.data.getItem("preferredCryptoList")
+        if(preferredCryptoList) {
+            if(preferredCryptoList.length) {
+                this.updatePreferredCryptoList(preferredCryptoList)
+            }
+        }
+    },
+    async beforeDestroy() {
+        await this.$localforage.data.setItem("preferredCryptoList", this.preferredCryptoList)
+    },
+    methods: {
+        ...mapMutations(["updatePreferredCryptoList"])
     },
     computed: {
         ...mapState({
             isSettingsSidebar: (state) => state.isSettingsSidebar,
+            preferredCryptoList: (state) => state.preferredCryptoList
         }),
         isDisplay() {
             if(this.isSettingsSidebar) {
@@ -34,4 +48,4 @@ export default {
 
 <style>
 
-</style>
+</style>/
