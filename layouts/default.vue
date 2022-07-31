@@ -9,7 +9,7 @@
 import { mapState, mapMutations } from "vuex"
 
 export default {
-    async mounted() {
+    async created() {
         const colorMode = await this.$localforage.settings.getItem("colorMode")
         if(!colorMode) {
             await this.$localforage.settings.setItem("colorMode", "light")
@@ -24,9 +24,6 @@ export default {
                 this.updatePreferredCryptoList(preferredCryptoList)
             }
         }
-    },
-    async beforeDestroy() {
-        await this.$localforage.data.setItem("preferredCryptoList", this.preferredCryptoList)
     },
     methods: {
         ...mapMutations(["updatePreferredCryptoList"])
