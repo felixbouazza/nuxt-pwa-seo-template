@@ -47,7 +47,7 @@ export default {
             if (this.isPreferredCrypto(this.crypto.title.toLowerCase())) {
                 var preferreds = this.preferredCryptoList.slice();
                 preferreds = preferreds.filter((crypto) => {
-                    crypto != this.crypto.title.toLowerCase()
+                    return crypto !== this.crypto.title.toLowerCase()
                 })
                 this.updatePreferredCryptoList(preferreds)
                 await this.$localforage.data.setItem("preferredCryptoList", preferreds)
