@@ -36,25 +36,25 @@ export default {
       }),
       ...mapGetters(["isPreferredCrypto"]),
       isCurrentCrypto() {
-        return this.currentCrypto == this.crypto.title && !this.isSettingsSidebar ? "bg-blue-500" : ""
+        return this.currentCrypto == this.crypto.id && !this.isSettingsSidebar ? "bg-blue-500" : ""
       },
       preferredCrypto: {
         get() {
-            if(this.isPreferredCrypto(this.crypto.title.toLowerCase())) return true
+            if(this.isPreferredCrypto(this.crypto.id)) return true
             return false
         },
         async set() {
-            if (this.isPreferredCrypto(this.crypto.title.toLowerCase())) {
+            if (this.isPreferredCrypto(this.crypto.id)) {
                 var preferreds = this.preferredCryptoList.slice();
                 preferreds = preferreds.filter((crypto) => {
-                    return crypto !== this.crypto.title.toLowerCase()
+                    return crypto !== this.crypto.id
                 })
                 this.updatePreferredCryptoList(preferreds)
                 await this.$localforage.data.setItem("preferredCryptoList", preferreds)
             }
             else {
                 var preferreds = this.preferredCryptoList.slice();
-                preferreds.push(this.crypto.title.toLowerCase())
+                preferreds.push(this.crypto.id)
                 this.updatePreferredCryptoList(preferreds)
                 await this.$localforage.data.setItem("preferredCryptoList", preferreds)
             }

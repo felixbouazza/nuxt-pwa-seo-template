@@ -7,7 +7,7 @@
         <template v-if="isSettingsSidebar">
             <SidebarCrypto
             v-for="crypto in filteredCryptoList"
-            :key="crypto.title"
+            :key="crypto.id"
             :crypto="crypto"
             />
         </template>
@@ -15,7 +15,7 @@
             <ul>
                 <SidebarCrypto
                 v-for="crypto in filteredCryptoList['preferredCryptoList']"
-                :key="crypto.title"
+                :key="crypto.id"
                 :crypto="crypto"
                 />
             </ul>
@@ -23,7 +23,7 @@
             <ul>
                 <SidebarCrypto
                 v-for="crypto in filteredCryptoList['unpreferredCryptoList']"
-                :key="crypto.title"
+                :key="crypto.id"
                 :crypto="crypto"
                 />
             </ul>
@@ -70,7 +70,7 @@ export default {
             let preferredCryptoList = []
             let unpreferredCryptoList = []
             filteredCryptoList.map((crypto) => {
-                if(this.preferredCryptoList.includes(crypto.title.toLowerCase())) {
+                if(this.preferredCryptoList.includes(crypto.id)) {
                     preferredCryptoList.push(crypto)
                 } else {
                     unpreferredCryptoList.push(crypto)

@@ -14,7 +14,7 @@
 export default {
     async asyncData({ $content, params, store}) {
         const crypto = await $content("cryptomonnaies", params.slug).fetch();
-        store.commit("setCurrentCrypto", crypto.title)
+        store.commit("setCurrentCrypto", crypto.id)
         return { crypto }
     },
 }
