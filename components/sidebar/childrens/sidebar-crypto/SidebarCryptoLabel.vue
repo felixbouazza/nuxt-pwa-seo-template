@@ -31,11 +31,10 @@ export default {
             isSettingsSidebar: (state) => state.isSettingsSidebar,
         }),
         logo() {
-                if (this.$colorMode.preference == "light") return this.crypto.navbarLogo
-                return this.crypto.navbarDarkLogo
-            }
-        },
-    },
+            if (this.$colorMode.preference == "light") return this.crypto.navbarLogo
+            return this.crypto.navbarDarkLogo
+        }
+    }
 }
 </script>
 
