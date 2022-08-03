@@ -29,7 +29,9 @@ collections:
       - { label: "ID", name: "id", widget: "ncw-id", prefix: "cryptomonnaies", timestamp: false, hidden: false}
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Logo", name: "logo", widget: "image"}
+      - { label: "Logo dark mode", name: "darkLogo", widget: "image"}
       - { label: "Logo de la Navbar", name: "navbarLogo", widget: "image"}
+      - { label: "Logo de la Navbar dark mode", name: "navbarDarkLogo", widget: "image"}
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Meta-Keywords", name: "metaKeywords", widget: "string"}
       - { label: "Lien du site officiel", name: "officialLink", widget: "string"}
