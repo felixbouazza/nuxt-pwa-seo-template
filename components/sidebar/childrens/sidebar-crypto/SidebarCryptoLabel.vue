@@ -30,6 +30,11 @@ export default {
         ...mapState({
             isSettingsSidebar: (state) => state.isSettingsSidebar,
         }),
+        logo() {
+                if (this.$colorMode.preference == "light") return this.crypto.navbarLogo
+                return this.crypto.navbarDarkLogo
+            }
+        },
     },
 }
 </script>
