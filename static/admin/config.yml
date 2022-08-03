@@ -26,6 +26,7 @@ collections:
     folder: "content/cryptomonnaies"
     create: true
     fields:
+      - { label: "ID", name: "id", widget: "ncw-id", prefix: "cryptomonnaies", timestamp: false, hidden: false}
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Logo", name: "logo", widget: "image"}
       - { label: "Logo de la Navbar", name: "navbarLogo", widget: "image"}
@@ -44,6 +45,7 @@ collections:
     folder: "content/actualites"
     create: true
     fields:
+      - { label: "ID", name: "id", widget: "ncw-id", prefix: "actualites", timestamp: false, hidden: false}
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Image", name: "image", widget: "image"}
       - { label: "Description", name: "description", widget: "string" }
@@ -58,6 +60,7 @@ collections:
     folder: "content/airdrops"
     create: true
     fields:
+      - { label: "ID", name: "id", widget: "ncw-id", prefix: "airdrops", timestamp: false, hidden: false}
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Image", name: "image", widget: "image"}
       - { label: "Description", name: "description", widget: "string" }
@@ -72,6 +75,7 @@ collections:
     folder: "content/gouvernances"
     create: true
     fields:
+      - { label: "ID", name: "id", widget: "ncw-id", prefix: "gouvernances", timestamp: false, hidden: false}
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Image", name: "image", widget: "image"}
       - { label: "Description", name: "description", widget: "string" }
@@ -86,6 +90,7 @@ collections:
     folder: "content/staking"
     create: true
     fields:
+      - { label: "ID", name: "id", widget: "ncw-id", prefix: "staking", timestamp: false, hidden: false}
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Image", name: "image", widget: "image"}
       - { label: "Description", name: "description", widget: "string" }
