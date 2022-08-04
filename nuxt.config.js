@@ -4,19 +4,33 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'cosmosdocs',
+    title: "CosmosDocs.io - de la documentation, de l'actualité et plus encore sur vos cryptomonnaies préférées dans l'environnement Cosmos (ATOM)",
     htmlAttrs: {
-      lang: 'en'
+      lang: 'fr-FR'
     },
     meta: [
       { charset: 'utf-8' },
+      { name: "HandheldFriendly", content: "True" },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
+      { rel: 'sitemap', type: 'application/xml', href: `${process.env.WEBSITE_URL || "http://localhost:4500"}/sitemap.xml` },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'manifest', href: '/site.webmanifest' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/android-chrome-192x192.png' },
+      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/android-chrome-512x512.png' },
+      { hid: "canonical", rel: "canonical", href: `${process.env.WEBSITE_URL || "http://localhost:4500"}` },
     ]
+  },
+
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID || ""
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -27,9 +41,9 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
   ],
+
   server: {
     port: 4500
-    
   },
   
   robots: {
@@ -51,6 +65,7 @@ export default {
     '@nuxt/postcss8',
     '@nuxtjs/localforage',
     "@nuxtjs/color-mode",
+    '@nuxtjs/google-analytics',
   ],
 
   tailwindcss: {

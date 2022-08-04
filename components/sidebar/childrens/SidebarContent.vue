@@ -19,8 +19,11 @@
                 :crypto="crypto"
                 />
             </ul>
-            <p>Disabled</p>
-            <ul>
+            <div class="flex flex-row">
+                <SidebarCryptoArrow @toggle-sub-menu="toggleDisabledMenu"/>
+                <p>Désactiver</p>
+            </div>
+            <ul class="pl-4" v-if="activeDisabledMenu">
                 <SidebarCrypto
                 v-for="crypto in filteredCryptoList['unpreferredCryptoList']"
                 :key="crypto.id"
@@ -37,7 +40,8 @@ import { mapState } from 'vuex'
 export default {
     data() {
       return {
-        cryptoList: []
+        cryptoList: [],
+        activeDisabledMenu: false
       }
     },
     computed: {
@@ -81,6 +85,11 @@ export default {
                 unpreferredCryptoList
             }
         }
+    },
+    methods: {
+        async toggleDisabledMenu() {
+            this.activeDisabledMenu = !this.activeDisabledMenu;
+        },
     },
     async fetch() {
         this.cryptoList = await this.$content("cryptomonnaies").fetch();
