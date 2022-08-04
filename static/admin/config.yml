@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
   branch: master
+  auth_type: pkce
+  app_id: a0c33b409daa8500b96dd0bb93adefbcfc92829dcddfece0a7290de99aaa7170
 
 media_folder: static/img
 public_folder: /img
