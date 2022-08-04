@@ -5,7 +5,7 @@ logo: /img/logo_juno.png
 darkLogo: /img/logo_juno_dark.png
 navbarLogo: /img/logo_sidebar_juno.png
 navbarDarkLogo: /img/logo_sidebar_dark_juno.png
-description: JUNØ c'est trop bien
+description: JUNØ C UN TRUC DE FOUFOUFOFUOFU
 metaKeywords: juno, cryptomonnaies
 officialLink: https://www.junonetwork.io/
 twitterLink: https://twitter.com/JunoNetwork
