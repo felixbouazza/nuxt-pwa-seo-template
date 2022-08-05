@@ -97,7 +97,7 @@ export default {
     manifest: {
       name: "CosmosDocs",
       short_name: "CosmosDocs",
-      description: "Découvrez les spécificités techniques de vos cryptomonnaies préféréés sur le réseau Cosmos",
+      description: "De la documentation, de l'actualité et plus encore sur vos cryptomonnaies préférées dans l'environnement Cosmos (ATOM)",
       lang: "fr",
       display: 'standalone',
       theme_color: "#000000",
