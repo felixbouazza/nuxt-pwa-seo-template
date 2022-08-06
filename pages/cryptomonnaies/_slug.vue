@@ -12,27 +12,11 @@
         <div>
             EN ATTENTE DE CONCEPTION
         </div>
-        <div class="flex flex-col space-y-6">
-            <div class="flex flex-row border border-gray-200 py-2 px-6">
-                <div class="flex">
-                </div>
-                <a target="_blank" :href="crypto.officialLink">Site Officiel</a>
-            </div>
-            <div class="flex flex-row border border-gray-200 py-2 px-6">
-                <div class="flex">
-                </div>
-                <a target="_blank" :href="crypto.twitterLink">Twitter</a>
-            </div>
-            <div class="flex flex-row border border-gray-200 py-2 px-6">
-                <div class="flex">
-                </div>
-                <a target="_blank" :href="crypto.discordLink">Discord</a>
-            </div>
-            <div class="flex flex-row border border-gray-200 py-2 px-6">
-                <div class="flex">
-                </div>
-                <a target="_blank" :href="crypto.mediumLink">Medium</a>
-            </div>
+        <div class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-4 xl:space-x-8">
+            <a v-if="crypto.officialLink" class="bg-officialColor text-center text-white rounded py-2 px-5" target="_blank" :href="crypto.officialLink">Site officiel</a>
+            <a v-if="crypto.twitterLink" class="bg-twitterColor text-center text-white rounded py-2 px-5" target="_blank" :href="crypto.twitterLink">Twitter</a>
+            <a v-if="crypto.discordLink" class="bg-discordColor text-center text-white rounded py-2 px-5" target="_blank" :href="crypto.discordLink">Discord</a>
+            <a v-if="crypto.mediumLink" class="bg-mediumColor text-center dark:text-black rounded py-2 px-5" target="_blank" :href="crypto.mediumLink">Medium</a>
         </div>
     </div>
 </template>
@@ -43,6 +27,10 @@ export default {
         logo() {
             if (this.$colorMode.preference == "light") return this.crypto.logo
             return this.crypto.darkLogo
+        },
+        smallLogo() {
+            if (this.$colorMode.preference == "light") return this.crypto.navbarLogo
+            return this.crypto.navbarDarkLogo
         }
         
     },
@@ -56,4 +44,4 @@ export default {
 
 <style>
 
-</style>
+</style> 
