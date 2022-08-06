@@ -6,9 +6,7 @@
             </div>
             <h1 class="text-7xl">{{ crypto.title }}</h1>
         </div>
-        <p class="border border-gray-300 p-5">
-            {{ crypto.description }}
-        </p>
+        <nuxt-content :document="crypto" />
         <div>
             EN ATTENTE DE CONCEPTION
         </div>
