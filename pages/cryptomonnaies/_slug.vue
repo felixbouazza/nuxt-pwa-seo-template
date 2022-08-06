@@ -6,11 +6,13 @@
             </div>
             <h1 class="text-7xl">{{ crypto.title }}</h1>
         </div>
-        <nuxt-content :document="crypto" />
+        <div class="w-5/6 xl:w-3/6 text-justify leading-relaxed">
+            <nuxt-content class="space-y-4" :document="crypto" />
+        </div>
         <div>
             EN ATTENTE DE CONCEPTION
         </div>
-        <div class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-4 xl:space-x-8">
+        <div class="flex space-x-4">
             <a v-if="crypto.officialLink" class="bg-officialColor text-center text-white rounded py-2 px-5" target="_blank" :href="crypto.officialLink">Site officiel</a>
             <a v-if="crypto.twitterLink" class="bg-twitterColor text-center text-white rounded py-2 px-5" target="_blank" :href="crypto.twitterLink">Twitter</a>
             <a v-if="crypto.discordLink" class="bg-discordColor text-center text-white rounded py-2 px-5" target="_blank" :href="crypto.discordLink">Discord</a>
@@ -39,7 +41,3 @@ export default {
     },
 }
 </script>
-
-<style>
-
-</style> 
