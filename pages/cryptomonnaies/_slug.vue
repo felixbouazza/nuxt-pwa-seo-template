@@ -9,9 +9,9 @@
         <div class="w-5/6 xl:w-3/6 text-justify leading-relaxed">
             <nuxt-content class="space-y-4" :document="crypto" />
         </div>
-        <div>
-            EN ATTENTE DE CONCEPTION
-        </div>
+        <!-- <div>
+            Courbe du prix du ATOM : en cours de construction
+        </div> -->
         <div class="flex space-x-4">
             <a v-if="crypto.officialLink" class="bg-officialColor text-center text-white rounded py-2 px-5" target="_blank" :href="crypto.officialLink">Site officiel</a>
             <a v-if="crypto.twitterLink" class="bg-twitterColor text-center text-white rounded py-2 px-5" target="_blank" :href="crypto.twitterLink">Twitter</a>
