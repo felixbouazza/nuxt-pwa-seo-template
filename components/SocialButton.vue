@@ -1,5 +1,5 @@
 <template>
-  <a v-if="link" :class="bgColor" class="text-sm xl:text-normal text-center text-white dark:text-black rounded py-1 px-3 md:py-2 md:px-5" target="_blank" :href="link">{{ text }}</a>
+  <a v-if="link" :class="bgColor" class="text-xs xl:text-normal text-center text-white dark:text-black rounded py-1 px-3 md:py-2 md:px-5" target="_blank" :href="link">{{ text }}</a>
 </template>
 
 <script>
