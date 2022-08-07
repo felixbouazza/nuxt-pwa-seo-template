@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col">
         <div class="flex flex-row justify-between items-center">
-            <li class="flex w-full" :class="isCurrentCrypto">
+            <li class="flex w-full">
                 <SidebarCryptoArrow @toggle-sub-menu="toggleCryptoSubMenu" v-if="!isSettingsSidebar"/>
                 <SidebarCryptoLabel :crypto="crypto"/>
             </li>
@@ -35,9 +35,9 @@ export default {
         preferredCryptoList: (state) => state.preferredCryptoList
       }),
       ...mapGetters(["isPreferredCrypto"]),
-      isCurrentCrypto() {
-        return this.currentCrypto == this.crypto.id && !this.isSettingsSidebar ? "bg-blue-500" : ""
-      },
+    //   isCurrentCrypto() {
+    //     return this.currentCrypto == this.crypto.id && !this.isSettingsSidebar ? "bg-blue-500" : ""
+    //   },
       preferredCrypto: {
         get() {
             if(this.isPreferredCrypto(this.crypto.id)) return true
