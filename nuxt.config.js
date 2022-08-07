@@ -1,3 +1,5 @@
+import getRoutes from "./utils/getRoutes";
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -26,6 +28,24 @@ export default {
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/android-chrome-512x512.png' },
       { hid: "canonical", rel: "canonical", href: `${process.env.WEBSITE_URL || "http://localhost:4500"}` },
     ]
+  },
+
+  sitemap: {
+    hostname: process.env.WEBSITE_URL || "http://localhost:4500",
+    path: "/sitemap.xml",
+    cacheTime: 1000 * 60 * 15,
+    gzip: true,
+    exclude: [
+        '/admin/**'
+    ],
+    defaults: {
+        changefreq: 'daily',
+        priority: 1,
+        lastmod: new Date()
+    },
+    routes() {
+        return getRoutes();
+    }
   },
 
   googleAnalytics: {
@@ -82,6 +102,7 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/robots',
+    '@nuxtjs/sitemap'
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
@@ -121,5 +142,11 @@ export default {
       name: "CosmosDocsIO",
       storeName: "data"
     }]
-  }
+  },
+
+  generate: {
+    routes() {
+        return getRoutes();
+    }
+}
 }
