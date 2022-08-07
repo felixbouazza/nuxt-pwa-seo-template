@@ -16,10 +16,10 @@ body {
     padding: 0;
 }
 
-a {
-    color:gray;
+.nuxt-content > p > a {
+    color: #3377c0;
 }
 
-a:hover {
-    color: lightgray;
+.nuxt-content > p > a:hover {
+    text-decoration: underline;
 }

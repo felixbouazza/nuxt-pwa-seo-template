@@ -21,7 +21,6 @@ module.exports = {
         iconColorDark: "#9da5ad",
         contentBackgroundDark: "#121212",
         twitterColor: "#00acee",
-        officialColor: "#4c4445",
         discordColor: "#5865F2",
         mediumColor: "#FFC017"
       }

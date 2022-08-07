@@ -12,11 +12,11 @@
         <!-- <div>
             Courbe du prix du ATOM : en cours de construction
         </div> -->
-        <div class="flex flex-row justify-center items-center space-x-4">
-            <a v-if="crypto.officialLink" class="bg-officialColor text-center text-white rounded py-1 px-3 md:py-2 md:px-5" target="_blank" :href="crypto.officialLink">Site officiel</a>
-            <a v-if="crypto.twitterLink" class="bg-twitterColor text-center text-white rounded py-1 px-3 md:py-2 md:px-5" target="_blank" :href="crypto.twitterLink">Twitter</a>
-            <a v-if="crypto.discordLink" class="bg-discordColor text-center text-white rounded py-1 px-3 md:py-2 md:px-5" target="_blank" :href="crypto.discordLink">Discord</a>
-            <a v-if="crypto.mediumLink" class="bg-mediumColor text-center text-white rounded py-1 px-3 md:py-2 md:px-5" target="_blank" :href="crypto.mediumLink">Medium</a>
+        <div class="flex flex-row justify-center items-center space-x-4 md:space-x-6 xl:space-x-8">
+            <a v-if="crypto.officialLink" class="bg-red-700 text-center text-white dark:text-black rounded py-1 px-3 md:py-2 md:px-5" target="_blank" :href="crypto.officialLink">Site officiel</a>
+            <a v-if="crypto.twitterLink" class="bg-twitterColor text-center text-white dark:text-black rounded py-1 px-3 md:py-2 md:px-5" target="_blank" :href="crypto.twitterLink">Twitter</a>
+            <a v-if="crypto.discordLink" class="bg-discordColor text-center text-white dark:text-black rounded py-1 px-3 md:py-2 md:px-5" target="_blank" :href="crypto.discordLink">Discord</a>
+            <a v-if="crypto.mediumLink" class="bg-mediumColor text-center text-white dark:text-black rounded py-1 px-3 md:py-2 md:px-5" target="_blank" :href="crypto.mediumLink">Medium</a>
         </div>
     </div>
 </template>
@@ -41,3 +41,6 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+</style>
