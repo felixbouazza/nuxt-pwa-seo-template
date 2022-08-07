@@ -1,7 +1,7 @@
 <template>
     <div>
         <SidebarHeadMain v-if="!isSettingsSidebar"/>
-        <SidebarHeadSettings v-else/>
+        <LazySidebarHeadSettings v-else/>
     </div>
 </template>
 
