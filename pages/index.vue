@@ -43,4 +43,16 @@ p {
   text-align: justify;
 }
 
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+li {
+  margin-left: 10px;
+}
+
 </style>

@@ -15,10 +15,10 @@ Pour chaque blockchain, vous retrouverez:
 
 Voici ce que vous devez savoir avant de démarrer :
 
-1. Vous pouvez <a href="https://www.01net.com/astuces/comment-installer-une-version-allegee-de-vos-programmes-preferes-sur-iphone-et-android-1566932.html">installer le site comme une application mobile (PWA)</a>
+1. Vous pouvez [installer le site comme une application mobile (PWA)](https://www.01net.com/astuces/comment-installer-une-version-allegee-de-vos-programmes-preferes-sur-iphone-et-android-1566932.html)
 2. Ouvrez les paramètres pour customiser votre interface ( DarkMode / LightMode ).
 3. Vous pouvez ajouter des cryptomonnaies en "Favoris" depuis les paramètres, les favoris apparaîtront en premier dans votre barre de navigation.
 4. Pour chercher une cryptomonnaie, tapez son nom dans la barre de recherche.
-5. Vous pouvez suivre <a href="https://twitter.com/Cosmosdocs">@CosmosDocs</a> sur les réseaux.
+5. Vous pouvez suivre [@CosmosDocs](https://twitter.com/Cosmosdocs) sur les réseaux.
 6. CosmosDocs et son équipe sont indépendants, nous ne vous inciterons donc jamais à l'achat et la vente d'une cryptomonnaie.
-7. Pour toute question, l'équipe est disponible via Twitter ou par email à <a HREF="mailto:cosmosdocs@protonmail.com">cosmosdocs@protonmail.com</a>.
+7. Pour toute question, l'équipe est disponible via Twitter ou par email à [cosmosdocs@protonmail.com](mailto:cosmosdocs@protonmail.com).
