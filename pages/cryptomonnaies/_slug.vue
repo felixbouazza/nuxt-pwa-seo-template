@@ -13,10 +13,10 @@
             Courbe du prix du ATOM : en cours de construction
         </div> -->
         <div class="flex flex-row justify-center space-x-4 md:space-x-6 xl:space-x-8">
-            <SocialButton :link="crypto.officialLink" :bgColor="'bg-red-700'" :text="'Site officiel'"/>
-            <SocialButton :link="crypto.twitterLink" :bgColor="'bg-twitterColor'" :text="'Twitter'"/>
-            <SocialButton :link="crypto.discordLink" :bgColor="'bg-discordColor'" :text="'Discord'"/>
-            <SocialButton :link="crypto.mediumLink" :bgColor="'bg-mediumColor'" :text="'Medium'"/>
+            <SocialButton v-if="crypto.officialLink" :link="crypto.officialLink" :bgColor="'bg-red-700'" :text="'Site officiel'"/>
+            <SocialButton v-if="crypto.twitterLink" :link="crypto.twitterLink" :bgColor="'bg-twitterColor'" :text="'Twitter'"/>
+            <SocialButton v-if="crypto.discordLink" :link="crypto.discordLink" :bgColor="'bg-discordColor'" :text="'Discord'"/>
+            <SocialButton v-if="crypto.mediumLink" :link="crypto.mediumLink" :bgColor="'bg-mediumColor'" :text="'Medium'"/>
         </div>
     </div>
 </template>

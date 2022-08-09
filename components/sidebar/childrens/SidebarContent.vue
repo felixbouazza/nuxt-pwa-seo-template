@@ -1,8 +1,8 @@
 <template>
     <div :class="isDisplay">
         <div v-if="isSettingsSidebar" class="flex flex-row justify-between py-2">
-            <p>Documentation</p>
-            <p>Activer</p>
+            <p>Cryptomonnaies</p>
+            <p>Favoris</p>
         </div>
         <template v-if="isSettingsSidebar">
             <SidebarCrypto
@@ -21,7 +21,7 @@
             </ul>
             <div class="flex flex-row">
                 <SidebarCryptoArrow @toggle-sub-menu="toggleDisabledMenu"/>
-                <p>Désactiver</p>
+                <p>Autres</p>
             </div>
             <ul class="pl-4" v-if="activeDisabledMenu">
                 <SidebarCrypto

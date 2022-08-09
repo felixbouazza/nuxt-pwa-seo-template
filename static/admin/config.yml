@@ -38,10 +38,10 @@ collections:
       - { label: "Logo de la Navbar dark mode", name: "navbarDarkLogo", widget: "image"}
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Meta-Keywords", name: "metaKeywords", widget: "string"}
-      - { label: "Lien du site officiel", name: "officialLink", widget: "string"}
-      - { label: "Lien du site Twitter", name: "twitterLink", widget: "string"}
-      - { label: "Lien du site Discord", name: "discordLink", widget: "string"}
-      - { label: "Lien du site Medium", name: "mediumLink", widget: "string"}
+      - { label: "Lien du site officiel", name: "officialLink", widget: "string", required: false}
+      - { label: "Lien du site Twitter", name: "twitterLink", widget: "string", required: false}
+      - { label: "Lien du site Discord", name: "discordLink", widget: "string", required: false}
+      - { label: "Lien du site Medium", name: "mediumLink", widget: "string", required: false}
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "actualites"
     label: "Actualités"
@@ -53,7 +53,7 @@ collections:
     fields:
       - { label: "ID", name: "id", widget: "ncw-id", prefix: "actualites", timestamp: false, hidden: false}
       - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image"}
+      - { label: "Image", name: "image", widget: "image", required: false}
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Meta-Keywords", name: "metaKeywords", widget: "string"}
       - { label: "Cryptomonnaie", name: "cryptomonnaie", widget: "relation", collection: "cryptomonnaies", search_fields: ["title"], value_field: "title", multiple: true}
@@ -68,7 +68,7 @@ collections:
     fields:
       - { label: "ID", name: "id", widget: "ncw-id", prefix: "airdrops", timestamp: false, hidden: false}
       - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image"}
+      - { label: "Image", name: "image", widget: "image", required: false}
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Meta-Keywords", name: "metaKeywords", widget: "string"}
       - { label: "Cryptomonnaie", name: "cryptomonnaie", widget: "relation", collection: "cryptomonnaies", search_fields: ["title"], value_field: "title", multiple: true}
@@ -83,7 +83,7 @@ collections:
     fields:
       - { label: "ID", name: "id", widget: "ncw-id", prefix: "gouvernances", timestamp: false, hidden: false}
       - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image"}
+      - { label: "Image", name: "image", widget: "image", required: false}
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Meta-Keywords", name: "metaKeywords", widget: "string"}
       - { label: "Cryptomonnaie", name: "cryptomonnaie", widget: "relation", collection: "cryptomonnaies", search_fields: ["title"], value_field: "title", multiple: true}
@@ -98,7 +98,7 @@ collections:
     fields:
       - { label: "ID", name: "id", widget: "ncw-id", prefix: "staking", timestamp: false, hidden: false}
       - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image"}
+      - { label: "Image", name: "image", widget: "image", required: false}
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Meta-Keywords", name: "metaKeywords", widget: "string"}
       - { label: "Cryptomonnaie", name: "cryptomonnaie", widget: "relation", collection: "cryptomonnaies", search_fields: ["title"], value_field: "title", multiple: true}
