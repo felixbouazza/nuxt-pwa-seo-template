@@ -9,7 +9,7 @@ Nous essayons sur ce site de proposer du contenu simple, accessible et surtout g
 Pour chaque blockchain, vous retrouverez:
 
 - Un canal __Actualité__: Relayant les infos et news les plus croustillantes du moment.
-- Un canal __Gouvernance__: Sur lequel nous essayons de traduire et vulgariser les votes de gouvernances des cryptomonnaies.
+- Un canal __Gouvernance__: Sur lequel nous essayons de traduire et vulgariser les votes de gouvernance des cryptomonnaies.
 - Un canal __Airdrop__: Qui ne sera pas forcèment présent sur toutes les cryptomonnaies, car les airdrops sont généralement donnés à la mise en place du Token. Mais qui pourra contenir les airdrops pour lequel posséder et/ou staker le token peut amener à une éligibilité.
 - Un canal __Staking__: Comprenant les news et données relatives au staking (Validateurs, Rendement, APY, etc).
 
