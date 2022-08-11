@@ -2,16 +2,17 @@
 title: Home
 ---
 
-CosmosDocs est un site proposant de la documentation, de la vulgarisation et de l'actualité sur l'écosystème Cosmos (ATOM). Le site est en ligne depuis le mois d'Août 2022 et compte à ce jour 6 collaborateurs / développeurs / rédacteurs.
+CosmosDocs est un site proposant de la documentation, de la vulgarisation et de l'actualité sur l'écosystème Cosmos (ATOM). Le site est en ligne depuis le mois d'Août 2022 et l'équipe à l'origine de ce projet est composée de 6 collaborateurs : développeurs et rédacteurs.
 
-Nous essayons sur ce site de proposer du contenu simple, accessible et surtout gratuit ! Dans l'objectif d'étendre le périmètre de l'écosystème Cosmos à la communauté francophone.
+Dans l'objectif d'étendre le périmètre de l'écosystème Cosmos à la communauté francophone, nous proposons du contenu simple, accessible et surtout gratuit !
 
-Pour chaque blockchain, vous retrouverez:
+Pour cela, un panel de fonctionnalités est mis à votre disposition afin de vous renseigner au mieux sur chaque cryptomonnaie/blockchain :
 
-- Un canal __Actualité__: Relayant les infos et news les plus croustillantes du moment.
-- Un canal __Gouvernance__: Sur lequel nous essayons de traduire et vulgariser les votes de gouvernance des cryptomonnaies.
-- Un canal __Airdrop__: Qui ne sera pas forcèment présent sur toutes les cryptomonnaies, car les airdrops sont généralement donnés à la mise en place du Token. Mais qui pourra contenir les airdrops pour lequel posséder et/ou staker le token peut amener à une éligibilité.
-- Un canal __Staking__: Comprenant les news et données relatives au staking (Validateurs, Rendement, APY, etc).
+- Un canal __Actualité__: Relayant les informations les plus récentes et les news importantes du moment.
+- Un canal __Gouvernance__: Une traduction des votes de gouvernance ainsi qu’une vulgarisation de l’aspect technique de ceux-ci.
+- Un canal __Airdrop__: Vous permettra de connaître les conditions à remplir afin d’être éligible aux futurs Airdrops (seulement dans le cas où des Airdrops sont disponibles).
+- Un canal __Staking__: Des statistiques de rendements ainsi que des données relatives au staking seront renseignées (validateurs, APY, inflation, etc.). 
+
 
 Voici ce que vous devez savoir avant de démarrer :
 
@@ -20,5 +21,5 @@ Voici ce que vous devez savoir avant de démarrer :
 3. Vous pouvez ajouter des cryptomonnaies en "Favoris" depuis les paramètres, les favoris apparaîtront en premier dans votre barre de navigation.
 4. Pour chercher une cryptomonnaie, tapez son nom dans la barre de recherche.
 5. Vous pouvez suivre [@CosmosDocs](https://twitter.com/Cosmosdocs) sur les réseaux.
-6. CosmosDocs et son équipe sont indépendants, nous ne vous inciterons donc jamais à l'achat et la vente d'une cryptomonnaie.
+6.  L'équipe de CosmosDocs est indépendante. Nous ne vous inciterons donc jamais à l'achat et/ou à la vente d'une cryptomonnaie.
 7. Pour toute question, l'équipe est disponible via Twitter ou par email à [cosmosdocs@protonmail.com](mailto:cosmosdocs@protonmail.com).

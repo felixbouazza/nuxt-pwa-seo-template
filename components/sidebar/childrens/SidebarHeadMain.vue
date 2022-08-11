@@ -21,6 +21,7 @@
           placeholder="Rechercher..."
         />
       </div>
+      <SharedHomeButton/>
       <button @click="switchNavbar">
         <svg class="fill-current dark:text-iconColorDark" width="24" height="24" viewBox="0 0 24 24">
           <path

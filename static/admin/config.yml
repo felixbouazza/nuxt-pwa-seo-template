@@ -42,6 +42,7 @@ collections:
       - { label: "Lien du site Twitter", name: "twitterLink", widget: "string", required: false}
       - { label: "Lien du site Discord", name: "discordLink", widget: "string", required: false}
       - { label: "Lien du site Medium", name: "mediumLink", widget: "string", required: false}
+      - { label: "Profile", name: "written_by", widget: "relation", collection: "profiles", search_fields: ["profile_name"], value_field: "id", multiple: false, required: false}
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "actualites"
     label: "Actualités"
@@ -56,7 +57,8 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false}
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Meta-Keywords", name: "metaKeywords", widget: "string"}
-      - { label: "Cryptomonnaie", name: "cryptomonnaie", widget: "relation", collection: "cryptomonnaies", search_fields: ["title"], value_field: "title", multiple: true}
+      - { label: "Cryptomonnaie", name: "cryptomonnaie", widget: "relation", collection: "cryptomonnaies", search_fields: ["title"], value_field: "id", multiple: true}
+      - { label: "Profile", name: "written_by", widget: "relation", collection: "profiles", search_fields: ["profile_name"], value_field: "id", multiple: false, required: false}
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "airdrops"
     label: "Airdrops"
@@ -71,7 +73,8 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false}
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Meta-Keywords", name: "metaKeywords", widget: "string"}
-      - { label: "Cryptomonnaie", name: "cryptomonnaie", widget: "relation", collection: "cryptomonnaies", search_fields: ["title"], value_field: "title", multiple: true}
+      - { label: "Cryptomonnaie", name: "cryptomonnaie", widget: "relation", collection: "cryptomonnaies", search_fields: ["title"], value_field: "id", multiple: true}
+      - { label: "Profile", name: "written_by", widget: "relation", collection: "profiles", search_fields: ["profile_name"], value_field: "id", multiple: false, required: false}
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "gouvernances"
     label: "Gouvernances"
@@ -86,7 +89,8 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false}
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Meta-Keywords", name: "metaKeywords", widget: "string"}
-      - { label: "Cryptomonnaie", name: "cryptomonnaie", widget: "relation", collection: "cryptomonnaies", search_fields: ["title"], value_field: "title", multiple: true}
+      - { label: "Cryptomonnaie", name: "cryptomonnaie", widget: "relation", collection: "cryptomonnaies", search_fields: ["title"], value_field: "id", multiple: true}
+      - { label: "Profile", name: "written_by", widget: "relation", collection: "profiles", search_fields: ["profile_name"], value_field: "id", multiple: false, required: false}
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "staking"
     label: "Staking"
@@ -101,5 +105,17 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false}
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Meta-Keywords", name: "metaKeywords", widget: "string"}
-      - { label: "Cryptomonnaie", name: "cryptomonnaie", widget: "relation", collection: "cryptomonnaies", search_fields: ["title"], value_field: "title", multiple: true}
+      - { label: "Cryptomonnaie", name: "cryptomonnaie", widget: "relation", collection: "cryptomonnaies", search_fields: ["title"], value_field: "id", multiple: true}
+      - { label: "Profile", name: "written_by", widget: "relation", collection: "profiles", search_fields: ["profile_name"], value_field: "id", multiple: false, required: false}
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "profiles"
+    label: "Profiles"
+    label_singular: "Profile"
+    description: "Liste des profiles présent sur le site, permet d'ajouter au contenu 'rédigé par'"
+    identifier_field: "id"
+    folder: "content/profiles"
+    create: true
+    fields:
+      - { label: "ID", name: "id", widget: "ncw-id", prefix: "staking", timestamp: false, hidden: false}
+      - { label: "Profile Name", name: "profile_name", widget: "string"}
+      - { label: "Profile Url", name: "profile_url", widget: "string"}

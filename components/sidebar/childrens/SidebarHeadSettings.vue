@@ -6,11 +6,7 @@
                 <path d="M7.828 11H20v2H7.828l5.364 5.364-1.414 1.414L4 12l7.778-7.778 1.414 1.414z"/>
             </svg>
         </button>
-        <button @click="goHome" class="flex flex-row fill-current dark:text-iconColorDark">
-            <svg width="24px" height="24px" viewBox="0 0 24 24">
-            <path d="M21.8844 15.2984C21.7278 17.0315 21.476 18.4398 21.1697 19.6963C20.9655 20.9529 19.7403 22 18.4131 22H16.7795C15.8606 22 15.1459 21.267 15.1459 20.3246V16.0314C15.1459 14.9843 14.3291 14.1466 13.3081 14.1466H10.9598C9.93884 14.1466 9.12205 14.9843 9.12205 16.0314V20.3246C9.12205 21.267 8.40736 22 7.48847 22H5.54859C4.2213 22 3.09821 21.0576 2.79191 19.6963C2.48562 18.3351 2.22005 17.0327 2.07722 15.2984C1.89596 13.0974 2.07722 11.0052 2.17932 9.64398C2.17932 8.80628 2.68982 7.96859 3.40451 7.44503L10.5514 2.52356C10.9598 2.20942 11.4703 2 11.9808 2C12.4913 2 13.1039 2.20942 13.5123 2.52356L20.6592 7.44503C21.3739 7.96859 21.8844 8.80628 21.8844 9.64398C21.9865 11.0052 22.0831 13.0993 21.8844 15.2984Z"/>
-            </svg>
-        </button>
+        <SharedHomeButton/>
         <div class="flex items-center justify-center">
             <svg class="fill-current dark:text-iconColorDark" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="none" d="M0 0h24v24H0z" />
@@ -38,41 +34,35 @@
 </template>
 
 <script>
-import { mapMutations, mapState } from 'vuex'
-
+import { mapMutations } from 'vuex'
+import HomeButton from '../../shared/HomeButton.vue'
 export default {
     computed: {
-        ...mapState(["cryptoListActive"]),
         isLightMode: {
             get() {
-                if (this.$colorMode.preference == "dark") return false
-                return true
+                if (this.$colorMode.preference == "dark")
+                    return false;
+                return true;
             },
             async set() {
                 if (this.$colorMode.preference == "dark") {
-                    this.$colorMode.preference = "light"
-                    await this.$localForage.settings.setItem("colorMode", "light")
+                    this.$colorMode.preference = "light";
+                    await this.$localForage.settings.setItem("colorMode", "light");
                 }
                 else {
-                    this.$colorMode.preference = "dark"
-                    await this.$localForage.settings.setItem("colorMode", "dark")
+                    this.$colorMode.preference = "dark";
+                    await this.$localForage.settings.setItem("colorMode", "dark");
                 }
             }
         }
     },
     methods: {
-        ...mapMutations(["switchNavbar", "displayCryptoList", "resetSearch"]),
-        goHome() {
-            if(this.cryptoListActive) {
-                this.displayCryptoList()
-            }
-            this.switchNavbar();
-            this.$router.push("/")
-        }
+        ...mapMutations(["switchNavbar", "resetSearch"]),
     },
     async beforeDestroy() {
         this.resetSearch();
-    }
+    },
+    components: { HomeButton }
 }
 </script>
 

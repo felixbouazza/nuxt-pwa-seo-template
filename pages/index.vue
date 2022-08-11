@@ -8,7 +8,7 @@
     </div>
     <div class="mx-auto w-5/6 xl:w-4/6 text-justify leading-relaxed flex flex-col justify-center items-center ">
         <nuxt-content class="space-y-4" :document="home"/>
-        <p class="mt-4">Si tu aimes le concept, notre contenu et que tu souhaites soutenir notre travail et le voir évoluer :</p>
+        <p class="mt-4">Si vous aimez le concept, notre contenu et vous souhaitez soutenir notre travail et le voir évoluer :</p>
         <a href="https://app.starname.me/profile/cosmos*docs" target="_blank">
           <button class="bg-green-400 rounded py-3 px-3 text-white font-bold w-60 mt-4">
             BUY ME A COFFEE !
