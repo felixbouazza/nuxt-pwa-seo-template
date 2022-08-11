@@ -19,7 +19,7 @@ L’application principale de son réseau porte le nom du projet : [Osmosis app]
 
 Son objectif est de rendre accessible la finance décentralisée et de fournir tout un tas de services utiles et pratiques pour l’utilisateur final (LP, Staking, Tracker DeFi, Liquid Staking, ..).
 
-Le jeton OSMO permet d’avoir un pouvoir de décision le réseau Osmosis à travers sa gouvernance et d’utiliser l’ensemble des services disponible sur ses applications décentralisées présentes sur son réseau. 
+Le jeton OSMO permet d’avoir un pouvoir de décision sur le réseau Osmosis à travers sa gouvernance et d’utiliser l’ensemble des services disponible sur ses applications décentralisées présentes sur son réseau. 
 
 Comme l’ensemble des projets bâtis et fonctionnants sur Cosmos, son jeton est émis par le biais du [Delegated Proof of Stake](https://journalducoin.com/lexique/delegated-proof-of-stake-dpos/) (DPoS).
 
