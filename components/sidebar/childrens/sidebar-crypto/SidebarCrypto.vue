@@ -2,7 +2,7 @@
     <div class="flex flex-col">
         <div class="flex flex-row justify-between items-center">
             <li class="flex w-full">
-                <SidebarCryptoArrow @toggle-sub-menu="toggleCryptoSubMenu" v-if="!isSettingsSidebar"/>
+                <SidebarCryptoArrow @toggle-sub-menu="toggleCryptoSubMenu" v-if="!isSettingsSidebar && oneExist"/>
                 <SidebarCryptoLabel :crypto="crypto"/>
             </li>
             <div v-if="isSettingsSidebar">
@@ -20,6 +20,7 @@ export default {
     data() {
         return {
             subMenuIsActive: false,
+            oneExist: false
         };
     },
     props: {
@@ -66,6 +67,15 @@ export default {
         async toggleCryptoSubMenu() {
             this.subMenuIsActive = !this.subMenuIsActive;
         },
+    },
+    async fetch() {
+        const haveActuality = (await $content('actualites').only([]).fetch()).length
+        const haveGouvernance = (await $content('gouvernances').only([]).fetch()).length
+        const haveAirdrop = (await $content('airdrops').only([]).fetch()).length
+        const haveStaking = (await $content('staking').only([]).fetch()).length
+        if (haveActuality || haveGouvernance || haveAirdrop || haveStaking) {
+            this.oneExist = true
+        }
     },
 };
 </script>
