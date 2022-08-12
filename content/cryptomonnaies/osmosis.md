@@ -3,8 +3,8 @@ id: cryptomonnaies--cL-xA3Lh
 title: OSMOSIS
 logo: /img/logo_osmosis.png
 darkLogo: /img/logo_osmosis.png
-navbarLogo: /img/navbar_osmo.png
-navbarDarkLogo: /img/navbar_osmo.png
+navbarLogo: /img/logo_sidebar_osmosis.png
+navbarDarkLogo: /img/logo_sidebar_osmosis.png
 description: Osmosis est une Blockchain de layer 1 permettant le déploiement
   d’applications décentralisées, de smart contrats et de DEX
 metaKeywords: DEX, AMM, Cosmos, Osmosis, DeFi, Automated market maker, bitcoin,
