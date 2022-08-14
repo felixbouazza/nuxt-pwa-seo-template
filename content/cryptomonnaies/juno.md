@@ -24,7 +24,7 @@ L'écosystème est un pionnier du développement et de l'adoption de [CosmWasm](
 
 Juno a été construit à l'aide du [Cosmos SDK](https://v1.cosmos.network/sdk) et à lancer son réseau décentralisé le 1er Octobre 2021. Les contrats intelligents CosmWasm ont été mis en ligne le 15 décembre 2021.
 
-## Économie
+## Économie
 
 Le système économique de Juno est conçu pour favoriser une économie autonome. Les participants peuvent être des validateurs, des développeurs et des holders.
 

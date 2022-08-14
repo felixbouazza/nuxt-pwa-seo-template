@@ -8,6 +8,13 @@ module.exports = {
     "./plugins/**/*.{js,ts}",
     "./nuxt.config.{js,ts}",
   ],
+  purge: [
+    './components/**/*.{vue,js}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './nuxt.config.{js,ts}',
+  ],
   theme: {
     extend: {
       width: {
@@ -32,7 +39,8 @@ module.exports = {
     ],
     borderColor: ["dark"],
     textColor: ["dark"],
-  }
+  },
+  plugins: [require('@tailwindcss/typography')],
 }
 
     
