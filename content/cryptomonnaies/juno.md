@@ -23,3 +23,19 @@ Juno est une blochain permissionless, c'est à dire que n'importe qui peut crée
 L'écosystème est un pionnier du développement et de l'adoption de [CosmWasm](https://cosmwasm.com/), permettant aux développeurs de déployer des smart-contracts sécurisés et robustes.
 
 Juno a été construit à l'aide du [Cosmos SDK](https://v1.cosmos.network/sdk) et à lancer son réseau décentralisé le 1er Octobre 2021. Les contrats intelligents CosmWasm ont été mis en ligne le 15 décembre 2021.
+
+## Économie
+
+Le système économique de Juno est conçu pour favoriser une économie autonome. Les participants peuvent être des validateurs, des développeurs et des holders.
+
+Les développeurs jouent un rôle crucial dans l'économie Juno. Ils apportent de la valeur en développant la l'infrastructure, l'outillage et des applications décentralisées (dApp).
+
+Le token Juno sécurise le réseau, mais donne également des droits de vote aux validateurs et aux holders.
+
+## Token
+
+Le network Juno est une plateforme de smart-contracts détenue et exploiteé par la communauté. C'est pourquoi, la majorité du Genesis Supply a été confié à des acteurs engagés dans la communauté et dans le développement continu des fonctionnalités Juno.
+
+Initial Circulating Supply: 33 036 534 Juno  
+Initial Total Supply: 64 903 242 Juno  
+Maximum Supply (2033): 185 562 268 Juno
