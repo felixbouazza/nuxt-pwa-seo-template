@@ -1,6 +1,6 @@
 ---
 id: cryptomonnaies--cL-xA3Lh
-title: OSMOSIS
+title: Osmosis
 logo: /img/logo_osmosis.png
 darkLogo: /img/logo_osmosis.png
 navbarLogo: /img/logo_sidebar_osmosis.png
