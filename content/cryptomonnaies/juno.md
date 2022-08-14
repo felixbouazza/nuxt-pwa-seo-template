@@ -1,6 +1,6 @@
 ---
 id: cryptomonnaies-YWpYrL8Gz
-title: JUNO
+title: Juno
 logo: /img/logo_juno.png
 darkLogo: /img/logo_juno_dark.png
 navbarLogo: /img/logo_sidebar_juno.png
