@@ -1,6 +1,6 @@
 ---
 id: cryptomonnaies--cL-xA3Lh
-title: OSMOSIS
+title: Osmosis
 logo: /img/logo_osmosis.png
 darkLogo: /img/logo_osmosis.png
 navbarLogo: /img/logo_sidebar_osmosis.png
@@ -15,7 +15,7 @@ twitterLink: https://twitter.com/osmosiszone
 discordLink: https://discord.com/invite/osmosis
 mediumLink: https://medium.com/osmosis
 ---
-L’application principale de son réseau porte le nom du projet : [Osmosis app](https://app.osmosis.zone/). C’est un Exchange Décentralisé (DEX) et AMM, c’est à dire qu’il permet de réaliser des échanges de cryptomonnaie de manière automatisée et décentralisée.
+L’application principale de son réseau porte le nom du projet : [Osmosis app](https://app.osmosis.zone/). C’est un Exchange Décentralisé (DEX) et AMM, c’est-à-dire qu’il permet de réaliser des échanges de cryptomonnaie automatisés et décentralisés.
 
 Son objectif est de rendre accessible la finance décentralisée et de fournir tout un tas de services utiles et pratiques pour l’utilisateur final (LP, Staking, Tracker DeFi, Liquid Staking, ..).
 
@@ -23,4 +23,4 @@ Le jeton OSMO donne un pouvoir de décision sur le réseau Osmosis à travers sa
 
 Comme l’ensemble des projets bâtis et fonctionnants sur Cosmos, son jeton est émis par le biais du [Delegated Proof of Stake](https://journalducoin.com/lexique/delegated-proof-of-stake-dpos/) (DPoS).
 
-Osmosis utilise [l'Inter Blockchain Communication](https://ibcprotocol.org/) (IBC), aujourd’hui on peux donc retrouver le jeton OSMO sur énormément d’autres réseaux Blockchain issu de l’écosystème Cosmos.
+Osmosis utilise [l'Inter Blockchain Communication](https://ibcprotocol.org/) (IBC), aujourd’hui on peut donc retrouver le jeton OSMO sur énormément d’autres réseaux Blockchain issu de l’écosystème Cosmos.
