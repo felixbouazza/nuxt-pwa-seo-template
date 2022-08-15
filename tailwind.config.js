@@ -30,7 +30,20 @@ module.exports = {
         twitterColor: "#00acee",
         discordColor: "#5865F2",
         mediumColor: "#FFC017"
-      }
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            color: '#333',
+            a: {
+              color: '#3182ce',
+              '&:hover': {
+                color: '#2c5282',
+              },
+            },
+          },
+        },
+      },
     }
   },
   variants: {

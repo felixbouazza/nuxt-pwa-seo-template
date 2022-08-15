@@ -68,7 +68,7 @@ export default {
             this.subMenuIsActive = !this.subMenuIsActive;
         },
     },
-    async fetch() {
+    async fetch({ $content }) {
         const haveActuality = (await $content('actualites').only([]).fetch()).length
         const haveGouvernance = (await $content('gouvernances').only([]).fetch()).length
         const haveAirdrop = (await $content('airdrops').only([]).fetch()).length

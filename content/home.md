@@ -23,3 +23,5 @@ Voici ce que vous devez savoir avant de démarrer :
 5. Vous pouvez suivre [@CosmosDocs](https://twitter.com/Cosmosdocs) sur les réseaux.
 6.  L'équipe de CosmosDocs est indépendante. Nous ne vous inciterons donc jamais à l'achat et/ou à la vente d'une cryptomonnaie.
 7. Pour toute question, l'équipe est disponible via Twitter ou par email à [cosmosdocs@protonmail.com](mailto:cosmosdocs@protonmail.com).
+
+Si vous aimez le concept, notre contenu et vous souhaitez soutenir notre travail et le voir évoluer :

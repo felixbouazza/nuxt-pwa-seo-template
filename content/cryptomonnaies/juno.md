@@ -39,3 +39,7 @@ Le network Juno est une plateforme de smart-contracts détenue et exploiteé par
 Initial Circulating Supply: 33 036 534 Juno  
 Initial Total Supply: 64 903 242 Juno  
 Maximum Supply (2033): 185 562 268 Juno
+
+### accessible
+
+## fez,pfez

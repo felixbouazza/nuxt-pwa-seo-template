@@ -15,11 +15,3 @@ body {
     margin: 0;
     padding: 0;
 }
-
-.nuxt-content > p > a {
-    color: #3377c0;
-}
-
-.nuxt-content > p > a:hover {
-    text-decoration: underline;
-}
