@@ -15,7 +15,7 @@ twitterLink: https://twitter.com/osmosiszone
 discordLink: https://discord.com/invite/osmosis
 mediumLink: https://medium.com/osmosis
 ---
-L’application principale de son réseau porte le nom du projet : [Osmosis app](https://app.osmosis.zone/). C’est un Exchange Décentralisé (DEX) et AMM, c’est-à-dire qu’il permet de réaliser des échanges de cryptomonnaie de manière automatisée et décentralisée.
+L’application principale de son réseau porte le nom du projet : [Osmosis app](https://app.osmosis.zone/). C’est un Exchange Décentralisé (DEX) et AMM, c’est-à-dire qu’il permet de réaliser des échanges de cryptomonnaie automatisés et décentralisés.
 
 Son objectif est de rendre accessible la finance décentralisée et de fournir tout un tas de services utiles et pratiques pour l’utilisateur final (LP, Staking, Tracker DeFi, Liquid Staking, ..).
 
