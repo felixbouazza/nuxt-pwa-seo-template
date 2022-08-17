@@ -119,3 +119,14 @@ collections:
       - { label: "ID", name: "id", widget: "ncw-id", prefix: "staking", timestamp: false, hidden: false}
       - { label: "Profile Name", name: "profile_name", widget: "string"}
       - { label: "Profile Url", name: "profile_url", widget: "string"}
+  - name: "Glossaire"
+    label: "Glossaire"
+    label_singular: "Glossaire"
+    description: "Description des mots techniques présents le site Cosmosdocs.io"
+    identifier_field: "title"
+    folder: "content/glossaire"
+    create: true
+    fields:
+      - { label: "ID", name: "id", widget: "ncw-id", prefix: "glossaire", timestamp: false, hidden: false}
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
