@@ -7,9 +7,7 @@
             <h1 class="text-5xl xl:text-7xl">{{ crypto.title }}</h1>
         </div>
         <SharedTableOfContent class="mx-auto w-5/6 xl:w-4/6" :toc="crypto.toc"/> 
-        <div class="mx-auto w-5/6 xl:w-4/6 text-justify leading-relaxed flex flex-col justify-center">
-            <nuxt-content class="space-y-4 prose lg:prose-lg dark:text-white" :document="crypto" />
-        </div>
+            <nuxt-content class="text-justify leading-loose mx-auto space-y-4 prose lg:prose-lg dark:text-white" :document="crypto" />
         <div class="flex flex-row justify-center space-x-4 md:space-x-6 xl:space-x-8">
             <SharedSocialButton v-if="crypto.officialLink" :link="crypto.officialLink" :bgColor="'bg-red-700'" :text="'Site officiel'"/>
             <SharedSocialButton v-if="crypto.twitterLink" :link="crypto.twitterLink" :bgColor="'bg-twitterColor'" :text="'Twitter'"/>

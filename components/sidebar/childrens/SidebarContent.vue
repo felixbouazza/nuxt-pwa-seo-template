@@ -29,7 +29,11 @@
                 :key="crypto.id"
                 :crypto="crypto"
                 />
+                <li>
+                    <nuxt-link to = "/glossaire">Glossaire</nuxt-link>
+                </li>
             </ul>
+
         </template>
     </div>
 </template>
