@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col">
         <div class="flex flex-row justify-between items-center">
-            <li class="flex w-full">
+            <li class="flex w-full px-2">
                 <SidebarCryptoArrow @toggle-sub-menu="toggleCryptoSubMenu" v-if="!isSettingsSidebar && oneExist"/>
                 <SidebarCryptoLabel :crypto="crypto"/>
             </li>
