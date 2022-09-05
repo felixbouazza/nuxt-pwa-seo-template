@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col md:flex-row h-screen dark:text-gray-300">
-        <Sidebar class="w-full md:w-96"/>
-        <Nuxt :class="isDisplay" class="md:w-content dark:bg-contentBackgroundDark py-10 md:absolute md:left-96 md:min-h-full"/>
+        <Sidebar/>
+        <Nuxt :class="isDisplay" class="dark:bg-contentBackgroundDark py-10 md:w-2/3 lg:w-4/6 xl:w-4/5 md:absolute md:top-0 md:right-0 md:min-h-full"/>
     </div>
 </template>
 
