@@ -38,6 +38,57 @@ export default {
         console.log(crypto.toc);
         return { crypto };
     },
-    components: { TableOfContent }
+    components: { TableOfContent },
+    // head() {
+    //     return {
+    //     title: this.categorie.htmlTitle,
+    //     meta: [
+    //         {
+    //         hid: "description",
+    //         name: "description",
+    //         content: this.crypto.description,
+    //         },
+    //         { name: "keywords", content: process.env.defaultKeywords },
+    //         { hid: "og:type", property: "og:type", content: "article" },
+    //         {
+    //         hid: "og:url",
+    //         property: "og:url",
+    //         content: `${process.env.baseUrl}/cryptos/${this.$route.params.slug}`,
+    //         },
+    //         {
+    //         hid: "og:title",
+    //         property: "og:title",
+    //         content: this.crypto.htmlTitle,
+    //         },
+    //         {
+    //         hid: "og:description",
+    //         property: "og:description",
+    //         content: this.crypto.description,
+    //         },
+    //         {
+    //         hid: "twitter:url",
+    //         name: "twitter:url",
+    //         content: `${process.env.baseUrl}/cryptos/${this.$route.params.slug}`,
+    //         },
+    //         {
+    //         hid: "twitter:title",
+    //         name: "twitter:title",
+    //         content: this.crypto.htmlTitle,
+    //         },
+    //         {
+    //         hid: "twitter:description",
+    //         name: "twitter:description",
+    //         content: this.crypto.description,
+    //         },
+    //     ],
+    //     link: [
+    //         {
+    //         hid: "canonical",
+    //         rel: "canonical",
+    //         href: `${process.env.baseUrl}/categories/${this.$route.params.slug}`,
+    //         },
+    //     ],
+    //     };
+    // }
 }
 </script>
